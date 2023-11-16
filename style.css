@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; 
+}
+
+.container {
+    display: flex;
+}
+
+/* Side bar */
+
+.sidebar {
+    width: 258px;
+    background-color: #f0f0f0;
+    border-right: 2px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Ensure the sidebar is a column layout */
+    height: 100vh; /* Set sidebar height to 100% of the viewport height */
+    position: fixed;
+}
+
+/* -------------------logo------------*/
+.logo-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.line {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ddd; 
+}
+
+.logo-text {
+    font-size: 28px; 
+    color: #bbbbbb; 
+}
+
+/* -------------------Sidebar links------------*/
+
+.sidebar-navigation {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-navigation a {
+    display: block;
+    text-decoration: none;
+    color: #8b8b8b; 
+    padding: 15px 0; 
+    font-size: 18px; 
+}
+
+
+.sidebar-navigation a.active,
+.sidebar-navigation a:hover {
+    background-color: #d8d8f9; 
+    color: #6a00ff;
+}
+
+/* -------------------user info------------*/
+
+.user-info {
+    margin-top: auto; 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info,
+.sidebar-navigation {
+    border-bottom: none;
+}
+
+
+.user-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('images/elon-musk.jpg');
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.user-details {
+    flex-grow: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: -12px;
+    font-size: 16px;
+}
+
+.user-email {
+    color: #888;
+    font-size: 14px;
+}
+
+/* main content */
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px; 
+    padding-left: 340px;
+    padding-right: 80px;
+    background-color: #f0f0f0; 
+}
+
+
+.main-content h1 {
+    color: #484848; 
+    margin-bottom: 20px; 
+}
+
+.content-links {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 2px solid #ddd; 
+    margin-bottom: 20px; 
+}
+
+.content-links a {
+    text-decoration: none;
+    color: #858585; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    display: inline-block; 
+    transition: background-color 0.3s; 
+}
+
+.content-links a:hover , 
+.content-links a.active {
+    background-color: #d8d8f9; 
+    color: #6a00ff; 
+}
+
+.cancel-button {
+    background-color: #fed0d0; 
+    color: #ff00009f; 
+    padding: 5px 7px; 
+    font-size: 16px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.cancel-button:hover {
+    background-color: #fed9d9; 
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.search-bar {
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 370px;
+    border: 1px solid #c7c7c7; 
+    border-radius: 7px;
+}
+
+.dropdown-button {
+    padding: 6px;
+    margin-left: 10px;
+    border: 1px solid #ddd; 
+    background-color: #dddddd;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #6b6a6a;
+}
+
+.attribute-names {
+    background-color: #e1e1e1; 
+    padding: 10px;
+    margin-top: 20px; 
+}
+
+.attribute-names span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px; 
+    color: #000000; 
+    width: 126px; 
+}
+
+.attribute-names span:first-child {
+    width: 260px;
+}
+
+.attribute-names span:last-child {
+    width: 153px;
+}
+
+
+
+.user-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.user-container div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.user-container div div {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 2px 0; 
+    font-size: 12px; 
+}
+
+
+.user-container div:first-child {
+    width: 280px; 
+}
+
+.user-container div:not(:first-child) {
+    width: 143px; 
+}
+
+
+.user-container div:first-child div {
+    font-size: 13px; 
+    color: #797979;
+    padding-top:5px;
+    
+}
+.user-container div:last-child div {
+    font-size: 13px;
+    color: #797979;
+    padding-top:5px;
+}
+
+.user-container div:nth-child(2) { 
+    font-size: 14px;
+    color: #008000; 
+}
+
+
+.user-container div:nth-child(2)[data-risk="Medium"] {
+    color: #FFA500; 
+}
+
+.user-container div:nth-child(2)[data-risk="High"] {
+    color: #FF0000; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+    }
+
+    .main-content {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juno</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+              <hr class="line">
+              <p class="logo-text">Logo Here</p>
+              <hr class="line">
+            </div>
+
+
+
+            <nav class="sidebar-navigation">
+                <a href="#overview">Overview</a>
+                <a href="#onboarding">Onboarding</a>
+               <a href="#monitoring" class="active">Monitoring</a>
+                <a href="#flagging">Flagging</a>
+                <a href="#source-of-income">Source of Income</a>
+                <a href="#uar">UAR</a>
+            </nav>
+
+            <div class="user-info">
+                <div class="user-picture"></div>
+                <div class="user-details">
+                    <p class="user-name">Elon Musk</p>
+                    <p class="user-email">elon@twitter.com</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h1>Monitoring</h1>
+              <div class="content-links">
+                  <a href="#pending" class="active">Pending</a>
+                  <a href="#completed">Completed</a>
+                  <button class="cancel-button">Cancel Account</button>
+              </div>
+
+              <div class="search-container">
+                  <input type="text" class="search-bar" placeholder="Search...">
+                  <select class="dropdown-button">
+                      <option value="" disabled selected hidden>Trigger Reason</option>
+                  </select>
+                  <select class="dropdown-button">
+                      <option value="" disabled selected hidden>Risk Level</option>
+                  </select>
+              </div>
+
+              <div class="attribute-names">
+                  <span>User</span>
+                  <span>Risk Level</span>
+                  <span>Trigger Reason</span>
+                  <span>In queue for</span>
+                  <span>Date added on</span>
+                  <span>Previously reviewed</span>
+              </div>
+
+              <div id="user-list-container"></div>
+
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
